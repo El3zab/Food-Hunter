@@ -1,0 +1,110 @@
+
+@import url("home.css");
+@import url("cart.css");
+
+nav{
+    position: relative;
+}
+
+@media (max-width: 500px) {
+    .book{
+        margin-top: 30vw;
+    }
+}
+
+.save-info{
+    margin-left: 12vw;
+}
+
+.save-info p{
+    display: inline;
+    font-size: 0.9em;
+}
+
+.order-placed{
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--success);
+    text-align: center;
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.item-pay{
+    width: 30vw;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item-pay-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-pay-line div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.item-pay-line img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+
+.cart-info{
+    border: 0;
+}
+
+.cart-info form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label,
+form:has(label) input,
+.save-info input{
+    cursor: pointer;
+}
+
+.cart-info form div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    border: 0;
+}
+
+.cart-info form:last-child{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "copun copun"
+        "copun-btn order-btn"
+    ;
+    gap: 10px;
+}
+ 
+.cart-info form:last-child input{
+    grid-area: copun;
+}
+
+.cart-info form:last-child button{
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .item-pay{
+        width: 90%;
+    }
+}

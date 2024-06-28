@@ -1,0 +1,180 @@
+@import url("home.css");
+
+nav{
+    position: relative;
+}
+
+.active span{
+    padding: 5px;
+    color: var(--light-button);
+    border-bottom: 3px solid var(--light-button);
+}
+
+header{
+    all: unset;
+}
+
+.header-text{
+    all: unset;
+    display: flex;
+    width: 75vw;
+    margin: auto;
+}
+
+article:has(table){
+    overflow-x:auto;
+}
+
+table{
+    text-align: center;
+    width: 80vw;
+    margin: 100px auto 0;
+    border-radius: 10px;
+}
+
+table th,
+table td{
+    padding: 20px;
+    border-bottom: 1px solid var(--primary-2);
+}
+
+table td{
+    height: 120px;
+}
+
+table tr{
+    border: 1px solid var(--primary-2);
+}
+
+.item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+tbody div img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+tbody input{
+    background-color: transparent;
+    text-align: center;
+    width: 30%;
+    height: 35px;
+    padding: 7px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid var(--body);
+    margin-top: 10px;
+}
+
+td:has(> span.btn-arrow){
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-arrow{
+    margin-top: 10px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.btn-arrow button{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-arrow button:hover{
+    color: var(--light-button);
+}
+
+tfoot td{
+    border: unset;
+}
+
+tfoot button,
+.cart-info button,
+.coupon button{
+    padding: 10px 30px;
+    background-color: var(--button);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+tfoot button:hover,
+.cart-info button:hover,
+.coupon button:hover{
+    background-color: var(--light-button);
+    transition: 0.5s;
+}
+
+.coupon-info{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.cart-info{
+    width: 30vw;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    border: 2px solid var(--primary-2);
+    border-radius: 10px;
+}
+
+.coupon-info form{
+    width: 100%;
+    margin: 0;
+}
+
+.cart-info div{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--primary-2);
+}
+
+.cart-info button{
+    width: 50%;
+    margin: auto;
+}
+
+.cart-info button:last-child a{
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .coupon-info{
+        width: 80vw;
+        flex-direction: column;
+        margin: 20px auto 0;
+        gap: 20px;
+    }
+    .cart-info{
+        width: 100%;
+    }
+    .cart-info button{
+        width: 30%;
+    }
+    table td .quntity{
+        padding: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .coupon button {
+        width: 50vw;
+        margin: auto;
+    }   
+}
+@media (max-width: 550px) {
+    .coupon button {
+        width: 50vw;
+    }
+    .cart-info button{
+        width: 50%;
+    }
+}
